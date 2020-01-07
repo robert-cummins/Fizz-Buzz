@@ -14,3 +14,5 @@ const fizzBuzz = (num) => {
 }
 
 fizzBuzz(99)
+
+export default fizzBuzz
