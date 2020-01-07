@@ -1,5 +1,6 @@
 const fizzBuzz = (num) => {
-    Array.from(Array(num).keys()).map(element => {
+    Array.from(Array(num +1).keys()).map(element => {
+        element++
         if (element % 3 === 0 && element % 5 === 0) {
             console.log('FizzBuzz')
         } else if(element % 3 === 0){
@@ -12,4 +13,4 @@ const fizzBuzz = (num) => {
     })
 }
 
-fizzBuzz(101)
+fizzBuzz(99)
