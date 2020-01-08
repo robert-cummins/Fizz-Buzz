@@ -1,18 +1,24 @@
 const fizzBuzz = (num) => {
-    Array.from(Array(num +1).keys()).map(element => {
-        element++
-        if (element % 3 === 0 && element % 5 === 0) {
-            console.log('FizzBuzz')
-        } else if(element % 3 === 0){
-            console.log('Fizz')
-        } else if(element % 5 === 0){
-            console.log('Buzz')
-        } else {
-            console.log(element)
-        }
+    Array.from(Array(num).keys()).map(element => {
+        console.log(numberInterpreter(element + 1))
     })
 }
 
-fizzBuzz(99)
+const numberInterpreter = (num) => {
+    if (num % 3 === 0 && num % 5 === 0) {
+        return 'FizzBuzz'
+    } else if(num % 3 === 0){
+        return 'Fizz'
+    } else if(num % 5 === 0){
+        return 'Buzz'
+    } else {
+        return num
+    }
+}
 
-export default fizzBuzz
+fizzBuzz(100)
+
+module.exports = {
+    fizzBuzz,
+    numberInterpreter
+}
